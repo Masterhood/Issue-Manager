@@ -1,0 +1,46 @@
+/* CSS Document */
+.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      padding: 0 20px;
+    }
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .navbar a:hover {
+      color: #ccc;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 70px;
+      margin: 0;
+    }
+    .logo span {
+      font-size: 60px;
+      margin: 0 10px;
+    }
+    .login-btn {
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    div.form{
+    text-align:center;
+    
+    
+    }
+    footer{
+    text-align: center;
+    background-color:grey;
+    
+    }
