@@ -1,0 +1,10 @@
+This program is a prototype of a programe for corporate companies for resolving issues.
+
+Basic user creates an issue with a form on front page, filling in all windows of the form and submitting it.
+
+The issue will then be placed into databasis. Available only to admin staff. These admins have to me manually put into another database related to the one of the issues.
+Admins has to have a username and a password.
+
+When the admin logs in the issues are sorted out in a table by date of the latest till the newest submitted.
+
+Admin can then click on the button assigned to the issue and solve it by choosing "solved" in drop bar options(in progress, solved).
