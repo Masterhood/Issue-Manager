@@ -31,9 +31,9 @@ catch(PDOException $e)
     <div class="table">
        <table>
   <tr>
-    <th>ID of reporter</th>
+    <th>ID of Issue</th>
     <th>Type of issue</th>
-    <th>PC station number</th>
+    <th>ID of submitter</th>
     <th>Description</th>
     <th>Asignee</th>
     <th>Status</th>
@@ -59,7 +59,11 @@ catch(PDOException $e)
   </tr>
   <tr>
    <?php 
-        $sql = "select admin.jmeno as jmeno from admin";
+        
+      
+      $sql = "select IDZadavatele,typ as typ, popis as popis, stav as stav,Resitel from issue;";
+
+
               
         $result = $conn->query($sql);  
         $result->setFetchMode(PDO::FETCH_ASSOC);
@@ -67,10 +71,12 @@ catch(PDOException $e)
         
         <?php while ($row = $result->fetch()): ?>        
          <tr>
-         <td><?php echo ($row['jmeno']) ?><td>
-         <td><?php echo ($row['admin.prijmeni']) ?><td>
-         <td><?php echo ($row['admin.heslo']) ?><td>
-          <td><?php echo ($row['admin.username'])?><td>
+             <td><?php echo ($row['IDZadavatele']) ?></td>
+             <td><?php echo ($row['typ']) ?></td>
+             <td><?php echo($row['submitter'])?></td>   
+             <td><?php echo ($row['popis']) ?></td>
+             <td><?php echo ($row['username.admin'])?></td>
+             <td><?php echo ($row['stav'])?></td>
          </tr>        
         <?php endwhile; ?> 
       
