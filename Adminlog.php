@@ -29,11 +29,15 @@ catch(PDOException $e)
     </div>
 
   </nav>
+  <?php
+  if(!isset($_POST['submit'])){
+  ?>
     <div class="form">
     <form method="POST" action= "<?php echo $_SERVER['PHP_SELF'];?>">
+        
   <label for="username"></label><br><input type="text" id="username" name="username"placeholder="Name.."><br>
  <label for="problem"></label><br><input type="password" id="password" name="password"placeholder="Password..."><br>
-  <input type="submit" value="Submit">
+  <input type="submit" name="submit" value="Submit">
   </div>
   </form>
   <!-- add your content here -->
@@ -55,11 +59,11 @@ Hood Incorporation (325 North St. Paul Street #2020 Dallas, TX 75201, USA) Copyr
             } else {       
             
                 $username = $_POST['username'];
-                $paswword = $_POST['password'];  
-                $hash = md5($id.date('YmdMS'));         
+                $password = $_POST['password'];  
+                      
                               
-                    $sql = "insert into issue (username,paswword)
-                            values ('".$username."','".$paswword."')";
+                    $sql = "insert into admin (username,heslo)
+                            values ('".$username."','".$password."')";
                     $conn->query($sql);
                     
                     echo "<script>alert('Přihlášení do systému je úspěšné);</script>";
